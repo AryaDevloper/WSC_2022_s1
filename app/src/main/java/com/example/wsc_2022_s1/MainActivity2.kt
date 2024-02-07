@@ -28,12 +28,8 @@ class MainActivity2 : AppCompatActivity() {
         binding = ActivityMain2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-
         val navController = findNavController(R.id.nav_host_fragment_content_main)
-
         NavigationUI.setupWithNavController(binding.bottomNav, navController)
-
     }
 
 

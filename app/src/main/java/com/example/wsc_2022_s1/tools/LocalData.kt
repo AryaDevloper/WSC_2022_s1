@@ -37,4 +37,30 @@ class LocalData(private val context: Context) {
         file.writeText(j.toString())
     }
 
+
+    fun getOpeningTickets(): JSONArray {
+        val file = File(context.cacheDir, "opening_tickets.json")
+        if (!file.exists()) return JSONArray()
+
+        return JSONArray(file.readText())
+    }
+
+    fun getClosingTickets(): JSONArray {
+        val file = File(context.cacheDir, "closing_tickets.json")
+        if (!file.exists()) return JSONArray()
+
+        return JSONArray(file.readText())
+    }
+
+    fun setOpeningTickets(json: JSONArray) {
+        val file = File(context.cacheDir, "opening_tickets.json")
+        file.writeText(json.toString())
+    }
+
+    fun setClosingTickets(json: JSONArray) {
+        val file = File(context.cacheDir, "closing_tickets.json")
+        file.writeText(json.toString())
+    }
+
+
 }

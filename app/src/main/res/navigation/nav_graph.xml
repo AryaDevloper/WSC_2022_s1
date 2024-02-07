@@ -17,7 +17,11 @@
         android:id="@+id/ticketsFragment"
         android:name="com.example.wsc_2022_s1.TicketsFragment"
         android:label="fragment_tickets"
-        tools:layout="@layout/fragment_tickets" />
+        tools:layout="@layout/fragment_tickets" >
+        <action
+            android:id="@+id/action_ticketsFragment_to_createTicketFragment"
+            app:destination="@id/createTicketFragment" />
+    </fragment>
     <fragment
         android:id="@+id/recordsFragment"
         android:name="com.example.wsc_2022_s1.RecordsFragment"
@@ -41,4 +45,9 @@
             android:name="text"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/createTicketFragment"
+        android:name="com.example.wsc_2022_s1.CreateTicketFragment"
+        android:label="fragment_create_ticket"
+        tools:layout="@layout/fragment_create_ticket" />
 </navigation>
