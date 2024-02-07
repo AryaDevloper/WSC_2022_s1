@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/eventsFragment">
+    <fragment
+        android:id="@+id/eventsFragment"
+        android:name="com.example.wsc_2022_s1.EventsFragment"
+        android:label="fragment_events"
+        tools:layout="@layout/fragment_events" >
+        <action
+            android:id="@+id/action_eventsFragment_to_eventFragment"
+            app:destination="@id/eventFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ticketsFragment"
+        android:name="com.example.wsc_2022_s1.TicketsFragment"
+        android:label="fragment_tickets"
+        tools:layout="@layout/fragment_tickets" />
+    <fragment
+        android:id="@+id/recordsFragment"
+        android:name="com.example.wsc_2022_s1.RecordsFragment"
+        android:label="fragment_records"
+        tools:layout="@layout/fragment_records" />
+    <fragment
+        android:id="@+id/eventFragment"
+        android:name="com.example.wsc_2022_s1.EventFragment"
+        android:label="fragment_event"
+        tools:layout="@layout/fragment_event" >
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="viewCount"
+            app:argType="integer" />
+        <argument
+            android:name="images"
+            app:argType="string[]" />
+        <argument
+            android:name="text"
+            app:argType="string" />
+    </fragment>
+</navigation>
